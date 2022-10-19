@@ -15,20 +15,18 @@ function SignUp() {
             const user = await createUserWithEmailAndPassword(auth, email, password);
             console.log(user);
 
-            const newuser = {
-                username: username,
-                email: email,
-                password: password,
-            };
-
-            axios.post('http://127.0.0.1:8000/signup', { newuser })
-            .then((response) => {
-                console.log(response);
+            useEffect(() => {
+                axios.post('http://127.0.0.1:8000/signup', { 
+                    username,
+                    email, 
+                    password })
+                .then((response) => {
+                    console.log(response);
+                })
+                .catch((response) => {
+                    console.log(response)
+                })
             })
-            .error((response) => {
-                console.log(response)
-            })
-
         }
         catch(error) {
             console.log(error);
