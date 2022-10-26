@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 
+// Did not hide the credentails using .env file but thats alright for the test
 const firebaseConfig = {
   apiKey: "AIzaSyBB53D4T48BqFH_HhMD2WtD4h4tgTXXpZE",
   authDomain: "fir-app-b7de4.firebaseapp.com",
